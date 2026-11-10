@@ -1,0 +1,495 @@
+@charset "utf-8";
+
+/* ============================
+   MENU
+   ============================ */
+.menu {
+    position: fixed;
+    right: -140px;
+    width: 200px;
+    top: 0;
+    z-index: 10;
+    text-align: left;
+    height: 100%;
+}
+.menu.menu-open {
+	right: 0;
+}
+
+.menu-wrap {
+    position: absolute;
+    top: 0;
+    left: 60px;
+    background: #1a1a1a;
+    width: 140px;
+    height: 100%;
+}
+.menu h1.logo a {
+    font-family: "Google Sans", "Helvetica Neue", Helvetica, Arial, 
+    font-size: 16px;
+    font-weight: 800;
+    letter-spacing: .15em;
+    line-height: 40px;
+    text-transform: uppercase;
+    color: #fff;
+    margin-top: 10px;
+}
+.menu h1.logo a:hover {
+    color: #404040;
+}
+.menu img.logo {
+    margin: 20px 0;
+    max-width: 160px;
+}
+.menu a {
+    margin-left: 20px;
+    color: gray;
+    display: block;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 40px;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+}
+.menu a:hover {
+    color: #fff;
+}
+.menu a:active {
+    color: #fff;
+    -webkit-box-shadow: 0px 0px;
+    box-shadow: 0px 0px;
+}
+.menu a>i {
+    float: left;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: left;
+    width: 25px;
+    font-size: 14px;
+    line-height: 40px;
+    margin: 25px 2px;
+}
+.menu-close {
+	cursor: pointer;
+	display: block;
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	top: 20px;
+	right: 5px;
+	-webkit-transition: all .1s ease-in-out;
+	-moz-transition: all .1s ease-in-out;
+	-ms-transition: all .1s ease-in-out;
+	-o-transition: all .1s ease-in-out;
+	transition: all .1s ease-in-out;
+	background-image: url(../img/arrow.svg);
+}
+.menu-close:hover {
+	color: #fff;
+	-webkit-transition: all .1s ease-in-out;
+	-moz-transition: all .1s ease-in-out;
+	-ms-transition: all .1s ease-in-out;
+	-o-transition: all .1s ease-in-out;
+	transition: all .1s ease-in-out;
+	background-image: url(../img/arrow.svg);
+}
+/* ============================
+   MENU TOGGLE
+   ============================ */
+#menuToggle {
+    position: absolute;
+    top: 20px;
+    left: 0;
+    z-index: 11;
+    display: block;
+    text-align: center;
+    color: #FFFFFF;
+    width: 45px;
+    height: 45px;
+    padding: 0;
+    border: 0;
+    -webkit-appearance: none;
+    appearance: none;
+    cursor: pointer;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+    background-color: rgba(0,0,0,0.25);
+    -webkit-transition: all .1s ease-in-out;
+    -moz-transition: all .1s ease-in-out;
+    -ms-transition: all .1s ease-in-out;
+    -o-transition: all .1s ease-in-out;
+    transition: all .1s ease-in-out;
+    opacity: 1;
+    border-radius: 2px;
+}
+#menuToggle:hover {
+    background-color: rgba(0,0,0,0.50);
+    -webkit-transition: all .1s ease-in-out;
+    -moz-transition: all .1s ease-in-out;
+    -ms-transition: all .1s ease-in-out;
+    -o-transition: all .1s ease-in-out;
+    transition: all .1s ease-in-out;
+    width: 45px;
+    height: 45px;
+    display: block;
+    border-radius: 2px;
+}
+/* English version */
+/* Default fallback */
+
+ #menuToggle {
+    background-image: url(../img/menu.svg);
+}
+.lang-en #menuToggle {
+    background-image: url(../img/menu_en.svg);
+}
+/* Chinese version */
+.lang-cn #menuToggle {
+    background-image: url(../img/menu_cn.svg);
+}
+
+/* Show desktop navbar, hide mobile menu */
+.desktop-nav {
+  display: block;
+}
+.mobile-menu {
+  display: none;
+}
+#backToTop {
+    position: fixed;
+    bottom: 30px;
+    right: 15px;
+    padding: 10px 15px;
+	background-image: url("../img/arrow_up.svg");
+	width: 45px;
+    height: 45px;
+    background-color: rgba(0,0,0,0.25);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 2px;
+    z-index: 99999; /* stays above all layers */
+    transition: background-color 0.3s ease;
+}
+
+#backToTop:hover {
+    background-color: rgba(0,0,0,0.50);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+/* ============================
+   GLOBAL LINK + HEADING STYLES
+   ============================ */
+a {
+    color: #FFFFFF;
+    text-decoration: none;
+    background-color: transparent;
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    font-family: "Google Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+
+/* ============================
+   BODY PUSH
+   ============================ */
+.body-push {
+    position: relative;
+    left: 0;
+    overflow-x: hidden;
+    transition: left .3s ease;
+}
+.body-push-toleft {
+    left: -200px;
+}
+.body-push-toright {
+    left: 200px;
+}
+
+
+/* ============================
+   HEADINGS
+   ============================ */
+h1 {
+    padding: 25px 0 20px;
+    margin: 0;
+    font-weight: 800;
+    font-size: 1.8rem;
+    line-height: 1.3;
+    letter-spacing: 0px;
+    text-transform: uppercase;
+    text-align: center;
+    color: #333;
+    font-family: "Google Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+h2 {
+    margin: 10px 0 20px;
+    font-weight: 600;
+    font-size: 1.4rem;
+    line-height: 1.4;
+    text-align: center;
+    color: #333;
+    font-family: "Google Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+h3 {
+    margin-top: 0px;
+    margin-right: 0;
+    margin-left: 0;
+    margin-bottom: 0;
+    color: #7E7E7E;
+    font-weight: 400;
+    font-size: 100%;
+    text-align: center;
+    border-radius: 3px;
+    color: #333;
+    font-family: "Google Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+
+h4 {
+    margin: 0;
+    padding: 10px 5px;
+    font-weight: 400;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 1.1rem;
+    text-align: left;
+    letter-spacing: 0;
+    line-height: 1.75;
+    color: #333;
+    border-radius: 5px;
+    font-family: "Google Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+
+a {
+    color: #333;
+    text-decoration: none;
+    background-color: transparent;
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+}
+
+a:hover {
+    color: #656565;
+    opacity: 1;    
+}
+
+a:not([href]) {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:not([href]):hover {
+  color: inherit;
+  text-decoration: none;
+}
+
+.btn.btn-info {
+    min-width: 180px;
+    padding: 0.5rem 1.5rem;
+    border: 1px solid #999;
+    border-radius: 999px;
+    background-color: #999;
+    color: #fff;
+    text-align: center;
+    transition: background-color .2s ease, border-color .2s ease;
+}
+.btn.btn-info:hover,
+.btn.btn-info:focus-visible {
+    border-color: #b8b8b8;
+    background-color: #b8b8b8;
+    color: #fff;
+}
+.about-action > .btn.btn-info {
+    align-self: center;
+    width: 9em;
+    min-width: 0;
+    max-width: 100%;
+    padding-right: clamp(0.4rem, 2vw, 0.8rem);
+    padding-left: clamp(0.4rem, 2vw, 0.8rem);
+    font-size: clamp(0.625rem, 3.5vw, 1rem);
+    white-space: nowrap;
+}
+
+hr.hr-space {
+    height: 0;
+    margin: 2rem 0;
+    border: 0;
+}
+hr.hr-dotted {
+    margin: 1.5rem 0;
+    border: 0;
+    border-top: 2px dotted #999;
+    color: #999;
+    opacity: 1;
+}
+
+
+
+/* ============================
+   PARAGRAPHS
+   ============================ */
+p {
+    margin: 5px;
+    font-size: medium;
+	font-optical-sizing: auto;
+    color: #212121;
+	font-style: normal;
+    word-spacing: 1px;
+    font-family: "Google Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+
+
+/* ============================
+   FIGCAPTION BUTTON TEXT
+   ============================ */
+.gallery-item figcaption {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 30px;
+    background-color: #bababa;
+    border-radius: 5px;
+    opacity: 0;
+    transform: translateY(100%);
+    transition: transform .4s, opacity .1s .3s;
+}
+.gallery-item figure:hover figcaption {
+    opacity: 1;
+    transform: translateY(0);
+}
+.gallery-item figcaption a {
+    display: block;
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-align: center;
+    color: #fff;
+    padding-top: 5px;
+    letter-spacing: 0.5px;
+}
+
+/* ============================
+   GRID & FIGURES
+   ============================ */
+.row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    position: relative;
+    min-width: 100%;
+}
+.row div {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 0 solid rgba(0, 0, 0, 0.125);
+    border-radius: 0.5rem;
+    -webkit-box-shadow: 0px 0px 0px 0px #FFFFFF;
+    box-shadow: 0px 0px 0px 0px #FFFFFF;
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    padding-top: 0px;
+    min-width: 0px;
+    -webkit-box-sizing: inherit;
+    -moz-box-sizing: inherit;
+    box-sizing: inherit;
+}
+.row figure {
+    margin: 0;
+    position: relative;
+}
+.row figure img {
+    display: block;
+    max-width: 100%;
+}
+.row figcaption {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 30px;
+    background-color: #bababa;
+    color: #fff;
+    border-radius: 5px;
+    opacity: 0;
+    transform: translateY(100%);
+    transition: transform .4s, opacity .1s .3s;
+}
+.row figcaption a {
+    display: block;
+    font-size: 0.95rem;
+    font-weight: 500;
+    text-align: center;
+    color: #fff;
+    padding-top: 5px;
+    letter-spacing: 0.5px;
+}
+.row figcaption h3 {
+    padding: 0;
+    color: #fff;
+}
+
+/* Homepage spacing and rounded-rectangle captions */
+.home-grid figcaption {
+    height: 30px;
+    background-color: #bababa;
+}
+
+@media (min-width: 1200px) {
+    .home-grid.container {
+        width: calc(100% - 48px);
+        max-width: 1600px;
+    }
+}
+
+/* ============================
+   ANIMATION STYLE
+   ============================ */
+.ani-style figure {
+    overflow: hidden;
+}
+.ani-style figure img {
+    transition: transform .4s;
+}
+.ani-style figure:hover img,
+.ani-style figure:focus-within img {
+    transform: translateY(-30px);
+}
+.ani-style figure:hover figcaption,
+.ani-style figure:focus-within figcaption {
+    opacity: 1;
+    transform: translateY(0);
+    transition: transform .4s, opacity .1s;
+}
+
+/* ============================
+   CONTACT ICON SPACING
+   ============================ */
+address img {
+    margin: 0 15px;
+}
+
+/* ============================
+   FOOTER
+   ============================ */
+footer {
+    padding: 20px 0;
+    color: #888;
+    font-size: 0.9rem;
+    text-align: center;
+}
